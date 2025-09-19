@@ -7,3 +7,6 @@ class Solution(object):
         :type s2: str
         :rtype: bool
         """
+        if len(s1) > len(s2): return False
+
+        s1Count, s2Count = [0] * 26, [0] * 26
