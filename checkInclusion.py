@@ -27,3 +27,25 @@ class Solution(object):
                 matches += 1
             elif s1Count [index] + 1 == s2Count[index]:
                 matches -= 1
+    
+        index = ord(s2[l]) - ord('a')
+            s2Count[index] -= 1
+            if s1Count[index] == s2Count[index]:
+                matches += 1
+            elif s1Count[index] - 1 == s2Count[index]:
+                matches -= 1
+            l += 1
+        return matches == 26
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    s1 = "ab"
+    s2 = "eidbaooo"
+    print("Output is : ", sol.checkInclusion(s1,s2))
+
+    s3 = "ab"
+    s4 = "eidboaoo"
+    print("Output is : ", sol.checkInclusion(s3,s4))
+
+
