@@ -37,3 +37,15 @@ class Solution(object):
             l += 1
         return matches == 26
 
+
+if __name__ == "__main__":
+    sol = Solution()
+    s1 = "ab"
+    s2 = "eidbaooo"
+    print("Output is : ", sol.checkInclusion(s1,s2))
+
+    s3 = "ab"
+    s4 = "eidboaoo"
+    print("Output is : ", sol.checkInclusion(s3,s4))
+
+
